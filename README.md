@@ -1,4 +1,4 @@
-# 🏪 Frontend — Sistema de Gestión POS (Eben Ezer)
+# 🏪 Frontend — Sistema de Gestión POS
 
 Frontend del sistema POS, construido en **Next.js + TypeScript** y conectado a un backend **Spring Boot (Java) + MySQL**.
 
@@ -145,3 +145,21 @@ Estos son los puntos donde el frontend tuvo que ajustarse a decisiones o restric
 ## 🚨 Manejo de errores
 
 Toda respuesta de error del backend pasa por `lib/http-error.ts`, que la normaliza antes de llegar a los hooks. Los hooks de React Query exponen ese error a los componentes, que lo muestran vía `react-hot-toast`. Esto evita manejo ad-hoc por pantalla y mantiene un único punto de traducción entre errores HTTP y mensajes que el usuario final entiende.
+
+---
+
+# 🌐 Backend
+
+El backend funciona como una aplicación independiente que conecta con este Frontend.
+
+Actualmente el proyecto cuenta con un backend desarrollado utilizando tecnologías del ecosistema Java/Spring Boot.
+
+Repositorio:
+
+👉 **Sistema de Gestión POS — Backend**
+
+https://github.com/santiagozerda/SistemaPOS-Backend
+
+La arquitectura desacoplada permite evolucionar o reemplazar el frontend sin modificar la lógica principal del backend.
+
+---
